@@ -1,3 +1,6 @@
 # MLFlow files
 mlruns
+images
+models
+save_data
 *.db
