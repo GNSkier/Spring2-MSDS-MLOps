@@ -1,2 +1,5 @@
 # Spring2-MSDS-MLOps
-Repository for USF MSDS Machine Learning Operations Class
+Repository for USF MSDS Machine Learning Operations Class (Spring 2025)
+
+
+
