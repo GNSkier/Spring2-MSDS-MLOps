@@ -4,3 +4,6 @@ images
 models
 save_data
 *.db
+
+# Other Files
+old_notebooks
