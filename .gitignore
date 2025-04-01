@@ -8,4 +8,7 @@ save_data
 # Other Files
 old_notebooks
 
-data
+# DVC Files
+adult.data
+adult.names
+adult.test
