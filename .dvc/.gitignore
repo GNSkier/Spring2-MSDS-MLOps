@@ -1,3 +1,15 @@
 /config.local
 /tmp
 /cache
+
+# MLFlow files
+mlruns
+images
+models
+save_data
+*.db
+
+# Other Files
+old_notebooks
+
+# DVC Files
