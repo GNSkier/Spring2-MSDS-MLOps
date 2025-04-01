@@ -1,6 +1,10 @@
 stages:
   prepare:
-    cmd: python src/create_features.py
+    cmd: python src/create_features_w_params.py
+    params:
+      - features.chi2percentile
+      - features.train_path
+      - features.test_path
     deps:
       - data/adult.data
       - data/adult.test
