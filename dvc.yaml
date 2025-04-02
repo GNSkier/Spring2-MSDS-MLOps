@@ -1,15 +1,8 @@
 stages:
   prepare:
-    cmd: python src/create_features_w_params.py
-    params:
-      - features.chi2percentile
-      - features.train_path
-      - features.test_path
+    cmd: python src/preprocessing.py
     deps:
-      - data/adult.data
-      - data/adult.test
-      - src/create_features.py
+      - labs/lab3/data/predictor_bronze.csv
+      - labs/lab3/data/target_bronze.csv
     outs:
-      - data/pipeline.pkl
-      - data/processed_train_data.csv
-      - data/processed_test_data.csv
+      - labs/lab3/data/Iris_Silver.csv

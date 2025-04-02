@@ -1,35 +1,18 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python src/create_features_w_params.py
+    cmd: python src/preprocessing.py
     deps:
-    - path: data/adult.data
+    - path: labs/lab3/data/predictor_bronze.csv
       hash: md5
-      md5: 5d7c39d7b8804f071cdd1f2a7c460872
-      size: 3974305
-    - path: data/adult.test
+      md5: 14bbe4fe712c85dec53d36f392577d67
+      size: 2450
+    - path: labs/lab3/data/target_bronze.csv
       hash: md5
-      md5: 366c746021dc50ad9d933d2817612fc9
-      size: 2003132
-    - path: src/create_features.py
-      hash: md5
-      md5: b93aea27ba45f8b24bdd52928f1f2b99
-      size: 2564
-    params:
-      params.yaml:
-        features.chi2percentile: 75
-        features.test_path: data/adult.test
-        features.train_path: data/adult.data
+      md5: 7954dac908e136cdd1510766ff819472
+      size: 2156
     outs:
-    - path: data/pipeline.pkl
+    - path: labs/lab3/data/Iris_Silver.csv
       hash: md5
-      md5: 4dd49db83f7c3cbf15835528ee4f678f
-      size: 6072
-    - path: data/processed_test_data.csv
-      hash: md5
-      md5: d9665d7402ba3c523964dde12b6f0e13
-      size: 7037777
-    - path: data/processed_train_data.csv
-      hash: md5
-      md5: 6283164add58dd8226fa912c3453db02
-      size: 14086142
+      md5: de9b4a64a1e7872bc584ed1c1c278df5
+      size: 5097
