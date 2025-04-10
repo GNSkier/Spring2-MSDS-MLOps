@@ -1,0 +1,18 @@
+Staring up Kube
+    kubectl start
+    kubectl dashboard
+
+Running docker commands in kube
+    eval $(minikube docker-env)
+Navigate to folder with docker file and create an image in kube
+    cd /mlflow_test
+    docker build -t mlflow-app .
+Exit out of docker commands
+    eval $(minikube docker-env --unset)
+
+Apply deployment and service files to minikube cluster
+    kubectle apply -f mlflow-deployment.yaml
+    kubectl apply -f mlflow-service.yaml
+
+Acess the application
+    minikube service mlflow-service
