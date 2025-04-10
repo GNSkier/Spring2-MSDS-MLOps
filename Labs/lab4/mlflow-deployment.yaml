@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mlflow
-        image: mlflow-minikube
+        image: mlflow-app
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
