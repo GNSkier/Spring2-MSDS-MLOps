@@ -1,0 +1,10 @@
+username: skier
+password: N1i9t9t9a
+instance name: mlopslab5test
+database name: lab5
+service account name: lab5service
+artificat repo name: lab5
+bucket name: mlopslab5test
+project id: mlops-456905
+service account: lab5service@mlops-456905.iam.gserviceaccount.com
+docker image: us-west2-docker.pkg.dev/mlops-456905/lab5/mlflow:v1
