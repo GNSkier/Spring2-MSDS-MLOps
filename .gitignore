@@ -12,3 +12,6 @@ old_notebooks
 adult.data
 adult.names
 adult.test
+
+#Meta Flow Files
+.metaflow
