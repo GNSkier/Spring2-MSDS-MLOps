@@ -8,3 +8,7 @@ bucket name: mlopslab5test
 project id: mlops-456905
 service account: lab5service@mlops-456905.iam.gserviceaccount.com
 docker image: us-west2-docker.pkg.dev/mlops-456905/lab5/mlflow:v1
+
+Credit Tracker: 69% : $51.40
+
+link: https://lab5service-993985116211.us-west2.run.app/#/models
