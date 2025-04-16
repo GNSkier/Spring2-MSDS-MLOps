@@ -154,6 +154,8 @@ class ClassifierScoringFlow(FlowSpec):
         import pandas as pd
 
         # Save predictions to CSV
+
+        self.results_df["true"] = self.y_true
         self.results_df.to_csv("predictions.csv", index=False)
 
         # Display the first few predictions
@@ -161,6 +163,7 @@ class ClassifierScoringFlow(FlowSpec):
         print(self.results_df.head())
 
         print("Flow completed successfully. Results saved to 'predictions.csv'")
+        print(self.y_true)
 
 
 if __name__ == "__main__":
