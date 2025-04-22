@@ -1,0 +1,15 @@
+setuptools 
+# Libraries (originally from conda)
+numpy==1.23.5
+scikit-learn==1.2.2
+pandas==2.0.3
+statsmodels==0.14.0
+
+# Packages (originally from pip)
+google-cloud-storage==2.5.0
+google-auth==2.11.0
+google-cloud-secret-manager==2.10.0
+ucimlrepo
+mlflow==2.9.2
+hyperopt==0.2.7
+psycopg2-binary==2.9.9 # for postgres  
