@@ -146,8 +146,8 @@ class ClassifierTrainLab(FlowSpec):
     def report(self):
         import mlflow
 
-        mlflow.set_tracking_uri("sqlite:///mlflow.db")
-        mlflow.set_experiment("Lab6_Iris")
+        mlflow.set_tracking_uri("https://lab7v7-54946107218.us-west2.run.app")
+        mlflow.set_experiment("Lab7v7")
 
         model_uri = f"runs:/{self.best_run_id}/model"
         with mlflow.start_run():
