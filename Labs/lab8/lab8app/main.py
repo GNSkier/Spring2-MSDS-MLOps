@@ -2,25 +2,29 @@ from fastapi import FastAPI
 import uvicorn
 import joblib
 from pydantic import BaseModel
+import mlflow
 
 app = FastAPI(
-    title="Reddit Comment Classifier",
-    description="Classify Reddit comments as either 1 = Remove or 0 = Do Not Remove.",
+    title="ML Flow predictor",
+    description="Use a ML Flow Model to create predictions",
     version="0.1",
 )
 
 # Defining path operation for root endpoint
 @app.get('/')
 def main():
-	return {'message': 'This is a model for classifying Reddit comments'}
+	return {'message': 'This uses a pretrained Ml Flow model trained on the Iris Dataset.'}
 
 class request_body(BaseModel):
-    reddit_comment : str
+    iris_parameters : str
 
 @app.on_event('startup')
 def load_artifacts():
-    global model_pipeline
-    model_pipeline = joblib.load("reddit_model_pipeline.joblib")
+    global model
+    mlflow.set_tracking_uri("sqlite:///mlflow.db")
+    mlflow.set_experiment("Lab6_Iris")
+    model_uri = f"models:/{model_name}/latest"
+    model = mlflow.pyfunc.load_model(model_uri)
 
 
 # Defining path operation for /predict endpoint
