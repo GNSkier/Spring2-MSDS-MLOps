@@ -11,7 +11,7 @@ class ClassifierTrainLab(FlowSpec):
         import mlflow
 
         mlflow.set_tracking_uri("sqlite:///mlflow.db")
-        mlflow.set_experiment("Lab8.1_Iris")
+        mlflow.set_experiment("Lab8.2_Testing")
 
         # Fetches data from UCIrepo
         iris = fetch_ucirepo(id=53)
@@ -59,7 +59,7 @@ class ClassifierTrainLab(FlowSpec):
         import mlflow
 
         mlflow.set_tracking_uri("sqlite:///mlflow.db")
-        mlflow.set_experiment("Lab8.1_Iris")
+        mlflow.set_experiment("Lab8.2_Testing")
 
         algo = tpe.suggest
         trials = Trials()
@@ -84,7 +84,7 @@ class ClassifierTrainLab(FlowSpec):
         import mlflow
 
         mlflow.set_tracking_uri("sqlite:///mlflow.db")
-        mlflow.set_experiment("Lab8.1_Iris")
+        mlflow.set_experiment("Lab8.2_Testing")
 
         model_uri = f"runs:/{self.best_run_id}/model"
         with mlflow.start_run():
